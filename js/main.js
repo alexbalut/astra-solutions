@@ -1,6 +1,13 @@
 (function () {
   "use strict";
 
+  function tr(key, fallback) {
+    if (window.CindaraI18n && typeof window.CindaraI18n.t === "function") {
+      return window.CindaraI18n.t(key);
+    }
+    return fallback;
+  }
+
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // Mobile nav
@@ -10,14 +17,14 @@
     toggle.addEventListener("click", function () {
       var open = toggle.getAttribute("aria-expanded") === "true";
       toggle.setAttribute("aria-expanded", String(!open));
-      toggle.setAttribute("aria-label", open ? "Open menu" : "Close menu");
+      toggle.setAttribute("aria-label", open ? tr("nav.open", "Open menu") : tr("nav.close", "Close menu"));
       mobileNav.classList.toggle("open", !open);
       document.body.style.overflow = open ? "" : "hidden";
     });
     mobileNav.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
         toggle.setAttribute("aria-expanded", "false");
-        toggle.setAttribute("aria-label", "Open menu");
+        toggle.setAttribute("aria-label", tr("nav.open", "Open menu"));
         mobileNav.classList.remove("open");
         document.body.style.overflow = "";
       });
@@ -131,7 +138,10 @@
         paused = !paused;
         hero.classList.toggle("is-paused", paused);
         pauseBtn.setAttribute("aria-pressed", String(paused));
-        pauseBtn.setAttribute("aria-label", paused ? "Play slideshow" : "Pause slideshow");
+        pauseBtn.setAttribute(
+          "aria-label",
+          paused ? tr("home.play", "Play slideshow") : tr("home.pause", "Pause slideshow")
+        );
         var playIcon = pauseBtn.querySelector(".icon-play");
         var pauseIcon = pauseBtn.querySelector(".icon-pause");
         if (playIcon && pauseIcon) {
@@ -184,12 +194,17 @@
       var interest = (document.getElementById("interest") || {}).value || "";
       var message = ((document.getElementById("message") || {}).value || "").trim();
 
-      setError("name", name.length < 2 ? "Please enter your name." : "");
+      setError("name", name.length < 2 ? tr("contact.err.name", "Please enter your name.") : "");
       var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-      setError("email", !emailOk ? "Please enter a valid email address." : "");
-      setError("company", company.length < 1 ? "Please enter your company name." : "");
-      setError("interest", !interest ? "Please select a topic." : "");
-      setError("message", message.length < 10 ? "Please add a short message (at least 10 characters)." : "");
+      setError("email", !emailOk ? tr("contact.err.email", "Please enter a valid email address.") : "");
+      setError("company", company.length < 1 ? tr("contact.err.company", "Please enter your company name.") : "");
+      setError("interest", !interest ? tr("contact.err.interest", "Please select a topic.") : "");
+      setError(
+        "message",
+        message.length < 10
+          ? tr("contact.err.message", "Please add a short message (at least 10 characters).")
+          : ""
+      );
 
       if (!valid) {
         var firstErr = form.querySelector(".error");

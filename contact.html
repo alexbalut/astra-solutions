@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Contact Cindara — ask about custom B2B software, integrations, or productized tools.">
-  <title>Contact — Cindara</title>
+  <meta name="description" content="Contact Cindara — ask about custom B2B software, integrations, or productized tools." data-i18n-meta="meta.contact.desc">
+  <title data-i18n-doc-title="meta.contact.title">Contact — Cindara</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,73 +12,80 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="index.html" aria-label="Cindara home">
+      <a class="logo" href="index.html" aria-label="Cindara home" data-i18n-aria="logo.aria">
         <svg class="logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
           <path d="M16 3L29 28H3L16 3Z" fill="#3B9EFF"/>
           <path d="M16 12L22.5 25H9.5L16 12Z" fill="#FFFFFF"/>
         </svg>
         Cindara
       </a>
-      <nav class="nav-desktop" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" class="nav-cta active" aria-current="page">Contact</a>
+      <nav class="nav-desktop" aria-label="Primary" data-i18n-aria="nav.primary">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="services.html" data-i18n="nav.services">Services</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="contact.html" class="nav-cta active" aria-current="page" data-i18n="nav.contact">Contact</a>
       </nav>
-      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="lang.label">
+          <button type="button" class="lang-btn is-active" data-lang="en" aria-pressed="true">EN</button>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+        </div>
+        <button class="menu-toggle" type="button" aria-label="Open menu" data-i18n-aria="nav.open" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
-    <nav id="mobile-nav" class="nav-mobile" aria-label="Mobile">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-      <a href="contact.html" class="nav-cta active" aria-current="page">Contact</a>
+    <nav id="mobile-nav" class="nav-mobile" aria-label="Mobile" data-i18n-aria="nav.mobile">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="services.html" data-i18n="nav.services">Services</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="contact.html" class="nav-cta active" aria-current="page" data-i18n="nav.contact">Contact</a>
     </nav>
   </header>
 
   <main id="main">
     <div class="page-hero">
       <div class="container">
-        <p class="eyebrow">Contact</p>
-        <h1>Tell us what you’re working on</h1>
-        <p class="lead">A custom build, an integration question, or a productized tool—send a short note. We’ll reply with next steps.</p>
+        <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+        <h1 data-i18n="contact.title">Tell us what you’re working on</h1>
+        <p class="lead" data-i18n="contact.lead">A custom build, an integration question, or a productized tool—send a short note. We’ll reply with next steps.</p>
       </div>
     </div>
 
     <div class="container contact-grid">
       <aside class="contact-info reveal">
-        <h2>What happens next</h2>
-        <p>This form is client-side for this demo site—it validates your input and shows a success message. For a real conversation, email us directly.</p>
+        <h2 data-i18n="contact.next.title">What happens next</h2>
+        <p data-i18n="contact.next.intro">This form is client-side for this demo site—it validates your input and shows a success message. For a real conversation, email us directly.</p>
         <ol class="next-steps">
           <li>
             <span class="next-num" aria-hidden="true">1</span>
             <div>
-              <strong>We read your note</strong>
-              <span>Usually within one business day.</span>
+              <strong data-i18n="contact.next1.title">We read your note</strong>
+              <span data-i18n="contact.next1.body">Usually within one business day.</span>
             </div>
           </li>
           <li>
             <span class="next-num" aria-hidden="true">2</span>
             <div>
-              <strong>Short reply or call</strong>
-              <span>Clarify fit, timeline, and whether custom or productized work makes sense.</span>
+              <strong data-i18n="contact.next2.title">Short reply or call</strong>
+              <span data-i18n="contact.next2.body">Clarify fit, timeline, and whether custom or productized work makes sense.</span>
             </div>
           </li>
           <li>
             <span class="next-num" aria-hidden="true">3</span>
             <div>
-              <strong>Concrete next step</strong>
-              <span>A scoped proposal, a discovery call, or an honest “not the right fit.”</span>
+              <strong data-i18n="contact.next3.title">Concrete next step</strong>
+              <span data-i18n="contact.next3.body">A scoped proposal, a discovery call, or an honest “not the right fit.”</span>
             </div>
           </li>
         </ol>
         <div class="contact-email">
-          <p>Prefer email?</p>
+          <p data-i18n="contact.prefer">Prefer email?</p>
           <a href="mailto:hello@cindara.dev">hello@cindara.dev</a>
         </div>
       </aside>
@@ -86,46 +93,46 @@
       <div class="form-card reveal">
         <div id="form-success" class="form-success" role="status" aria-live="polite">
           <svg width="48" height="48" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-6"/></svg>
-          <h3>Message ready</h3>
-          <p>Thanks—your details look good. On this demo site nothing is sent to a server. Email <a href="mailto:hello@cindara.dev">hello@cindara.dev</a> with the same info, or reconnect this form to your backend when you’re ready.</p>
+          <h3 data-i18n="contact.success.title">Message ready</h3>
+          <p data-i18n-html="contact.success.html">Thanks—your details look good. On this demo site nothing is sent to a server. Email <a href="mailto:hello@cindara.dev">hello@cindara.dev</a> with the same info, or reconnect this form to your backend when you’re ready.</p>
         </div>
         <form id="contact-form" class="form-fields" novalidate>
           <div class="form-row">
             <div class="form-group">
-              <label for="name">Name</label>
+              <label for="name" data-i18n="contact.label.name">Name</label>
               <input type="text" id="name" name="name" autocomplete="name" required aria-describedby="name-error">
               <p id="name-error" class="field-error" role="alert"></p>
             </div>
             <div class="form-group">
-              <label for="email">Email</label>
+              <label for="email" data-i18n="contact.label.email">Email</label>
               <input type="email" id="email" name="email" autocomplete="email" required aria-describedby="email-error">
               <p id="email-error" class="field-error" role="alert"></p>
             </div>
           </div>
           <div class="form-group">
-            <label for="company">Company <span class="hint">(required)</span></label>
+            <label for="company"><span data-i18n="contact.label.company">Company</span> <span class="hint" data-i18n="contact.label.companyHint">(required)</span></label>
             <input type="text" id="company" name="company" autocomplete="organization" required aria-describedby="company-error">
             <p id="company-error" class="field-error" role="alert"></p>
           </div>
           <div class="form-group">
-            <label for="interest">I’m interested in</label>
+            <label for="interest" data-i18n="contact.label.interest">I’m interested in</label>
             <select id="interest" name="interest" required aria-describedby="interest-error">
-              <option value="">Select a topic…</option>
-              <option value="custom">Custom software</option>
-              <option value="integrations">Integrations / APIs</option>
-              <option value="productized">Productized tools</option>
-              <option value="support">Implementation &amp; support</option>
-              <option value="other">Something else</option>
+              <option value="" data-i18n="contact.option.blank">Select a topic…</option>
+              <option value="custom" data-i18n="contact.option.custom">Custom software</option>
+              <option value="integrations" data-i18n="contact.option.integrations">Integrations / APIs</option>
+              <option value="productized" data-i18n="contact.option.productized">Productized tools</option>
+              <option value="support" data-i18n="contact.option.support">Implementation &amp; support</option>
+              <option value="other" data-i18n="contact.option.other">Something else</option>
             </select>
             <p id="interest-error" class="field-error" role="alert"></p>
           </div>
           <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required aria-describedby="message-error" placeholder="What you’re trying to improve, systems involved, timeline…"></textarea>
+            <label for="message" data-i18n="contact.label.message">Message</label>
+            <textarea id="message" name="message" required aria-describedby="message-error" placeholder="What you’re trying to improve, systems involved, timeline…" data-i18n-placeholder="contact.placeholder.message"></textarea>
             <p id="message-error" class="field-error" role="alert"></p>
           </div>
-          <button type="submit" class="btn btn-primary" style="width: 100%;">Send message</button>
-          <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--text-dim); text-align: center;">
+          <button type="submit" class="btn btn-primary" style="width: 100%;" data-i18n="contact.submit">Send message</button>
+          <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--text-dim); text-align: center;" data-i18n-html="contact.disclaimer.html">
             Client-side validation only—no data is stored by this static site. See our <a href="privacy.html">privacy note</a>.
           </p>
         </form>
@@ -144,33 +151,35 @@
             </svg>
             Cindara
           </a>
-          <p>Practical B2B software for operators. Montréal, Québec.</p>
-          <p class="footer-fr">Logiciels pour opérateurs — conçus à Montréal.</p>
+          <p data-i18n="footer.tagline">Practical B2B software for operators. Montréal, Québec.</p>
+          <p class="footer-fr" data-i18n="footer.taglineAlt">Logiciels pour opérateurs — conçus à Montréal.</p>
         </div>
         <div class="footer-col">
-          <h4>Navigate</h4>
+          <h4 data-i18n="footer.navigate">Navigate</h4>
           <ul>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Connect</h4>
+          <h4 data-i18n="footer.connect">Connect</h4>
           <ul>
             <li><a href="mailto:hello@cindara.dev">hello@cindara.dev</a></li>
             <li><a href="https://github.com/alexbalut/cindara" rel="noopener noreferrer" target="_blank">GitHub</a></li>
-            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="privacy.html" data-i18n="footer.privacy">Privacy</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Cindara · cindara.dev</span>
-        <span><a href="privacy.html">Privacy</a></span>
+        <span data-i18n="footer.copy">© 2026 Cindara · cindara.dev</span>
+        <span><a href="privacy.html" data-i18n="footer.privacy">Privacy</a></span>
       </div>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
+

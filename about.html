@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="About Cindara — a Montréal / Québec B2B software shop building practical tools for operators.">
-  <title>About — Cindara</title>
+  <meta name="description" content="About Cindara — a Montréal / Québec B2B software shop building practical tools for operators." data-i18n-meta="meta.about.desc">
+  <title data-i18n-doc-title="meta.about.title">About — Cindara</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,67 +12,74 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="index.html" aria-label="Cindara home">
+      <a class="logo" href="index.html" aria-label="Cindara home" data-i18n-aria="logo.aria">
         <svg class="logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
           <path d="M16 3L29 28H3L16 3Z" fill="#3B9EFF"/>
           <path d="M16 12L22.5 25H9.5L16 12Z" fill="#FFFFFF"/>
         </svg>
         Cindara
       </a>
-      <nav class="nav-desktop" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html" class="active" aria-current="page">About</a>
-        <a href="contact.html" class="nav-cta">Contact</a>
+      <nav class="nav-desktop" aria-label="Primary" data-i18n-aria="nav.primary">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="services.html" data-i18n="nav.services">Services</a>
+        <a href="about.html" class="active" aria-current="page" data-i18n="nav.about">About</a>
+        <a href="contact.html" class="nav-cta" data-i18n="nav.contact">Contact</a>
       </nav>
-      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="lang.label">
+          <button type="button" class="lang-btn is-active" data-lang="en" aria-pressed="true">EN</button>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+        </div>
+        <button class="menu-toggle" type="button" aria-label="Open menu" data-i18n-aria="nav.open" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
-    <nav id="mobile-nav" class="nav-mobile" aria-label="Mobile">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html" class="active" aria-current="page">About</a>
-      <a href="contact.html" class="nav-cta">Contact</a>
+    <nav id="mobile-nav" class="nav-mobile" aria-label="Mobile" data-i18n-aria="nav.mobile">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="services.html" data-i18n="nav.services">Services</a>
+        <a href="about.html" class="active" aria-current="page" data-i18n="nav.about">About</a>
+        <a href="contact.html" class="nav-cta" data-i18n="nav.contact">Contact</a>
     </nav>
   </header>
 
   <main id="main">
     <div class="page-hero">
       <div class="container">
-        <p class="eyebrow">About</p>
-        <h1>Built in Montréal for teams that care about the details</h1>
-        <p class="lead">Cindara is a B2B software practice: custom tools, integrations, and productized software—grounded in how businesses actually run day to day.</p>
+        <p class="eyebrow" data-i18n="about.eyebrow">About</p>
+        <h1 data-i18n="about.title">Built in Montréal for teams that care about the details</h1>
+        <p class="lead" data-i18n="about.lead">Cindara is a B2B software practice: custom tools, integrations, and productized software—grounded in how businesses actually run day to day.</p>
       </div>
     </div>
 
     <section class="section section-tight">
       <div class="container">
         <div class="prose reveal">
-          <p>
+          <p data-i18n="about.p1">
             We started from a simple observation: a lot of software sold to small and mid-sized businesses is either too generic or overly complex. Operators need tools that fit the work—not the other way around.
           </p>
-          <p>
+          <p data-i18n="about.p2">
             We take on custom software and integration work for teams who need something their current stack can’t do. Same standards either way—clear scope, usable delivery, honest communication.
           </p>
-          <p>
+          <p data-i18n="about.p3">
             We’re rooted in Montréal and Québec. English is fine for most clients; we’re comfortable working with operators across the city and beyond.
           </p>
         </div>
 
-        <div class="note-box reveal">
+        <div class="note-box reveal" data-i18n-html="about.note.html">
           <strong>Cindara</strong> is our company. The site lives at <a href="https://cindara.dev">cindara.dev</a>.
         </div>
 
         <figure class="figure-bleed reveal">
           <div class="photo-frame">
-            <img src="images/code-desk.jpg" alt="Dark desk with a monitor showing code" width="1920" height="1080" loading="lazy">
+            <img src="images/code-desk.jpg" alt="Dark desk with a monitor showing code" data-i18n-alt="about.img.alt" width="1920" height="1080" loading="lazy">
           </div>
-          <figcaption class="photo-caption">Building practical software from Montréal — clear scope, usable delivery.</figcaption>
+          <figcaption class="photo-caption" data-i18n="about.caption">Building practical software from Montréal — clear scope, usable delivery.</figcaption>
         </figure>
       </div>
     </section>
@@ -80,22 +87,22 @@
     <section class="section section-dark">
       <div class="container">
         <div class="section-header reveal">
-          <p class="eyebrow">Principles</p>
-          <h2>Values we operate by</h2>
-          <p>Short list. We use it when scoping work and when saying no.</p>
+          <p class="eyebrow" data-i18n="about.principles.eyebrow">Principles</p>
+          <h2 data-i18n="about.principles.title">Values we operate by</h2>
+          <p data-i18n="about.principles.lead">Short list. We use it when scoping work and when saying no.</p>
         </div>
         <div class="values">
           <div class="value-card reveal">
-            <h3>Clarity over hype</h3>
-            <p>We describe what the software does and what it doesn’t. No invented metrics or borrowed logos.</p>
+            <h3 data-i18n="about.v1.title">Clarity over hype</h3>
+            <p data-i18n="about.v1.body">We describe what the software does and what it doesn’t. No invented metrics or borrowed logos.</p>
           </div>
           <div class="value-card reveal">
-            <h3>Operator reality</h3>
-            <p>Staff time and real-world constraints come before feature lists.</p>
+            <h3 data-i18n="about.v2.title">Operator reality</h3>
+            <p data-i18n="about.v2.body">Staff time and real-world constraints come before feature lists.</p>
           </div>
           <div class="value-card reveal">
-            <h3>Durable delivery</h3>
-            <p>Ship something usable, document it, and leave you able to run it—not dependent on mystery.</p>
+            <h3 data-i18n="about.v3.title">Durable delivery</h3>
+            <p data-i18n="about.v3.body">Ship something usable, document it, and leave you able to run it—not dependent on mystery.</p>
           </div>
         </div>
       </div>
@@ -103,10 +110,10 @@
 
     <section class="cta-band">
       <div class="container reveal">
-        <h2>Want to work together?</h2>
-        <p>Custom project, integration, or a productized tool—start with a short note.</p>
+        <h2 data-i18n="about.cta.title">Want to work together?</h2>
+        <p data-i18n="about.cta.body">Custom project, integration, or a productized tool—start with a short note.</p>
         <div class="btn-group">
-          <a class="btn btn-primary" href="contact.html">Contact us</a>
+          <a class="btn btn-primary" href="contact.html" data-i18n="about.cta.btn">Contact us</a>
         </div>
       </div>
     </section>
@@ -123,33 +130,35 @@
             </svg>
             Cindara
           </a>
-          <p>Practical B2B software for operators. Montréal, Québec.</p>
-          <p class="footer-fr">Logiciels pour opérateurs — conçus à Montréal.</p>
+          <p data-i18n="footer.tagline">Practical B2B software for operators. Montréal, Québec.</p>
+          <p class="footer-fr" data-i18n="footer.taglineAlt">Logiciels pour opérateurs — conçus à Montréal.</p>
         </div>
         <div class="footer-col">
-          <h4>Navigate</h4>
+          <h4 data-i18n="footer.navigate">Navigate</h4>
           <ul>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Connect</h4>
+          <h4 data-i18n="footer.connect">Connect</h4>
           <ul>
             <li><a href="mailto:hello@cindara.dev">hello@cindara.dev</a></li>
             <li><a href="https://github.com/alexbalut/cindara" rel="noopener noreferrer" target="_blank">GitHub</a></li>
-            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="privacy.html" data-i18n="footer.privacy">Privacy</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Cindara · cindara.dev</span>
-        <span><a href="privacy.html">Privacy</a></span>
+        <span data-i18n="footer.copy">© 2026 Cindara · cindara.dev</span>
+        <span><a href="privacy.html" data-i18n="footer.privacy">Privacy</a></span>
       </div>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
+

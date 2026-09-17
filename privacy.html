@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Privacy note for the Cindara marketing site.">
-  <title>Privacy — Cindara</title>
+  <meta name="description" content="Privacy note for the Cindara marketing site." data-i18n-meta="meta.privacy.desc">
+  <title data-i18n-doc-title="meta.privacy.title">Privacy — Cindara</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,66 +12,73 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="index.html" aria-label="Cindara home">
+      <a class="logo" href="index.html" aria-label="Cindara home" data-i18n-aria="logo.aria">
         <svg class="logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
           <path d="M16 3L29 28H3L16 3Z" fill="#3B9EFF"/>
           <path d="M16 12L22.5 25H9.5L16 12Z" fill="#FFFFFF"/>
         </svg>
         Cindara
       </a>
-      <nav class="nav-desktop" aria-label="Primary">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="about.html">About</a>
-        <a href="contact.html" class="nav-cta">Contact</a>
+      <nav class="nav-desktop" aria-label="Primary" data-i18n-aria="nav.primary">
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="services.html" data-i18n="nav.services">Services</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="contact.html" class="nav-cta" data-i18n="nav.contact">Contact</a>
       </nav>
-      <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="header-actions">
+        <div class="lang-switch" role="group" aria-label="Language" data-i18n-aria="lang.label">
+          <button type="button" class="lang-btn is-active" data-lang="en" aria-pressed="true">EN</button>
+          <span class="lang-sep" aria-hidden="true">|</span>
+          <button type="button" class="lang-btn" data-lang="fr" aria-pressed="false">FR</button>
+        </div>
+        <button class="menu-toggle" type="button" aria-label="Open menu" data-i18n-aria="nav.open" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
     </div>
-    <nav id="mobile-nav" class="nav-mobile" aria-label="Mobile">
-      <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="about.html">About</a>
-      <a href="contact.html" class="nav-cta">Contact</a>
+    <nav id="mobile-nav" class="nav-mobile" aria-label="Mobile" data-i18n-aria="nav.mobile">
+      <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="services.html" data-i18n="nav.services">Services</a>
+        <a href="about.html" data-i18n="nav.about">About</a>
+        <a href="contact.html" class="nav-cta" data-i18n="nav.contact">Contact</a>
     </nav>
   </header>
 
   <main id="main">
     <div class="page-hero">
       <div class="container">
-        <p class="eyebrow">Legal</p>
-        <h1>Privacy note</h1>
-        <p class="lead">A short, honest summary for this static marketing site.</p>
+        <p class="eyebrow" data-i18n="privacy.eyebrow">Legal</p>
+        <h1 data-i18n="privacy.title">Privacy note</h1>
+        <p class="lead" data-i18n="privacy.lead">A short, honest summary for this static marketing site.</p>
       </div>
     </div>
 
     <div class="container">
       <article class="legal">
-        <p>This website is a static marketing site for Cindara. It does not run a backend contact database and does not intentionally collect personal information through the contact form.</p>
+        <p data-i18n="privacy.intro">This website is a static marketing site for Cindara. It does not run a backend contact database and does not intentionally collect personal information through the contact form.</p>
 
-        <h2>Contact form</h2>
-        <p>The contact form validates your input in the browser and shows a success message. Form data is not sent to or stored on our servers from this demo deployment. If you email us (for example at hello@cindara.dev), that correspondence is handled like normal email.</p>
+        <h2 data-i18n="privacy.form.h">Contact form</h2>
+        <p data-i18n="privacy.form.p">The contact form validates your input in the browser and shows a success message. Form data is not sent to or stored on our servers from this demo deployment. If you email us (for example at hello@cindara.dev), that correspondence is handled like normal email.</p>
 
-        <h2>Hosting &amp; logs</h2>
-        <p>If this site is hosted on GitHub Pages or a similar static host, the host may collect standard server or CDN logs (such as IP address, browser type, and pages requested). We do not control those systems beyond choosing a host.</p>
+        <h2 data-i18n="privacy.host.h">Hosting &amp; logs</h2>
+        <p data-i18n="privacy.host.p">If this site is hosted on GitHub Pages or a similar static host, the host may collect standard server or CDN logs (such as IP address, browser type, and pages requested). We do not control those systems beyond choosing a host.</p>
 
-        <h2>Fonts</h2>
-        <p>Pages may load the Inter typeface from Google Fonts. Google may process connection data according to their own policies when fonts are fetched.</p>
+        <h2 data-i18n="privacy.fonts.h">Fonts</h2>
+        <p data-i18n="privacy.fonts.p">Pages may load the Inter typeface from Google Fonts. Google may process connection data according to their own policies when fonts are fetched.</p>
 
-        <h2>Cookies</h2>
-        <p>This site does not set analytics or advertising cookies. Your browser may still store ordinary technical data for fonts or caching.</p>
+        <h2 data-i18n="privacy.cookies.h">Cookies &amp; preferences</h2>
+        <p data-i18n="privacy.cookies.p">This site does not set analytics or advertising cookies. Your language preference (EN/FR) may be stored in your browser’s local storage. Your browser may still store ordinary technical data for fonts or caching.</p>
 
-        <h2>Products</h2>
-        <p>If you use Cindara software products later, those products will have their own privacy terms covering operator and end-user data. This page only covers the marketing website.</p>
+        <h2 data-i18n="privacy.products.h">Products</h2>
+        <p data-i18n="privacy.products.p">If you use Cindara software products later, those products will have their own privacy terms covering operator and end-user data. This page only covers the marketing website.</p>
 
-        <h2>Contact</h2>
-        <p>Questions about this note: <a href="mailto:hello@cindara.dev">hello@cindara.dev</a>.</p>
-        <p style="margin-top: 2rem; font-size: 0.875rem; color: var(--text-dim);">Last updated: September 2026. Written for a demo / early marketing site—update when you add analytics, a real form backend, or product accounts.</p>
+        <h2 data-i18n="privacy.contact.h">Contact</h2>
+        <p data-i18n-html="privacy.contact.html">Questions about this note: <a href="mailto:hello@cindara.dev">hello@cindara.dev</a>.</p>
+        <p style="margin-top: 2rem; font-size: 0.875rem; color: var(--text-dim);" data-i18n="privacy.updated">Last updated: September 2026. Written for a demo / early marketing site—update when you add analytics, a real form backend, or product accounts.</p>
       </article>
     </div>
   </main>
@@ -87,33 +94,35 @@
             </svg>
             Cindara
           </a>
-          <p>Practical B2B software for operators. Montréal, Québec.</p>
-          <p class="footer-fr">Logiciels pour opérateurs — conçus à Montréal.</p>
+          <p data-i18n="footer.tagline">Practical B2B software for operators. Montréal, Québec.</p>
+          <p class="footer-fr" data-i18n="footer.taglineAlt">Logiciels pour opérateurs — conçus à Montréal.</p>
         </div>
         <div class="footer-col">
-          <h4>Navigate</h4>
+          <h4 data-i18n="footer.navigate">Navigate</h4>
           <ul>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="services.html" data-i18n="nav.services">Services</a></li>
+            <li><a href="about.html" data-i18n="nav.about">About</a></li>
+            <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Connect</h4>
+          <h4 data-i18n="footer.connect">Connect</h4>
           <ul>
             <li><a href="mailto:hello@cindara.dev">hello@cindara.dev</a></li>
             <li><a href="https://github.com/alexbalut/cindara" rel="noopener noreferrer" target="_blank">GitHub</a></li>
-            <li><a href="privacy.html">Privacy</a></li>
+            <li><a href="privacy.html" data-i18n="footer.privacy">Privacy</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Cindara · cindara.dev</span>
-        <span><a href="privacy.html">Privacy</a></span>
+        <span data-i18n="footer.copy">© 2026 Cindara · cindara.dev</span>
+        <span><a href="privacy.html" data-i18n="footer.privacy">Privacy</a></span>
       </div>
     </div>
   </footer>
 
+  <script src="js/i18n.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
+
