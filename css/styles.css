@@ -1028,3 +1028,70 @@ a:focus:not(:focus-visible) { outline: none; }
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Stock photo frames */
+.photo-frame {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border, #E5E5E5);
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.06);
+  background: #fff;
+}
+.photo-frame img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+.photo-frame.tall img {
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+.photo-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+@media (min-width: 800px) {
+  .photo-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+}
+.photo-caption {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+/* Hero aside with photo instead of mock UI */
+.hero-visual.hero-visual--photo {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  min-height: 0;
+  gap: 0.75rem;
+}
+.hero-visual.hero-visual--photo .photo-frame {
+  width: 100%;
+}
+.hero-visual.hero-visual--photo .photo-caption {
+  margin-top: 0;
+}
+
+/* Product visual that hosts a photo */
+.product-visual.product-visual--photo {
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  min-height: 0;
+  gap: 0.75rem;
+}
+.product-visual.product-visual--photo .pv-row {
+  padding: 0 0.15rem;
+}
+.product-visual.product-visual--photo .photo-frame {
+  width: 100%;
+}
+
+.photo-grid figure {
+  margin: 0;
+}
