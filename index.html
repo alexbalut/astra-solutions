@@ -8,7 +8,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -18,8 +18,8 @@
     <div class="container header-inner">
       <a class="logo" href="index.html" aria-label="Astra Solutions home">
         <svg class="logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-          <rect width="32" height="32" rx="6" fill="#1B3A4B"/>
-          <path d="M16 7L25 23H7L16 7Z" fill="#F7F6F3"/>
+          <path d="M16 3L29 28H3L16 3Z" fill="#0176D3"/>
+          <path d="M16 12L22.5 25H9.5L16 12Z" fill="#FFFFFF"/>
         </svg>
         Astra Solutions
       </a>
@@ -58,86 +58,70 @@
           </div>
           <p class="hero-fr">Basé à Montréal — outils conçus pour les opérateurs du Québec et d’ailleurs.</p>
         </div>
-        <aside class="hero-card reveal" aria-label="Featured product">
-          <p class="hero-card-label">Featured product</p>
-          <h3>GymQR Guide</h3>
-          <p>QR machine instructions and workout tracking for gym floors. Built for Montreal operators first.</p>
-          <ul class="hero-card-features">
-            <li>Scan a machine → clear, branded instructions</li>
-            <li>Members log sets without a separate app maze</li>
-            <li>Operators control content without waiting on IT</li>
-          </ul>
+        <aside class="hero-visual reveal" aria-label="Featured product">
+          <div class="pv-row">
+            <span class="pv-badge">Featured · GymQR</span>
+          </div>
+          <div class="pv-screen" style="flex:1; min-height:220px;">
+            <div class="pv-bar accent"></div>
+            <div class="pv-bar mid"></div>
+            <div class="pv-bar short"></div>
+            <div class="pv-grid-mini">
+              <div class="pv-tile"><strong>Scan QR</strong> Machine guide</div>
+              <div class="pv-tile"><strong>Form cues</strong> Setup · tempo</div>
+              <div class="pv-tile"><strong>Log set</strong> Weight · reps</div>
+              <div class="pv-tile"><strong>Staff edit</strong> Content live</div>
+            </div>
+          </div>
           <a class="card-link" href="solutions.html">Explore GymQR →</a>
         </aside>
       </div>
     </section>
 
-    <section class="section section-alt" id="who">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2>Who we serve</h2>
-          <p>Businesses that need software shaped around how they work day to day.</p>
-        </div>
-        <div class="audience-list">
-          <div class="audience-item reveal">
-            <h3>Gyms &amp; fitness operators</h3>
-            <p>Tools for member guidance, tracking, and staff workflows—starting with GymQR.</p>
-          </div>
-          <div class="audience-item reveal">
-            <h3>Service businesses</h3>
-            <p>Custom apps, booking flows, and internal tools when off-the-shelf software doesn’t quite fit.</p>
-          </div>
-          <div class="audience-item reveal">
-            <h3>Teams with systems to connect</h3>
-            <p>APIs, integrations, and light data plumbing so your stack talks without duct tape.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="services">
+    <section class="section section-alt" id="services">
       <div class="container">
         <div class="section-header reveal">
           <h2>What we do</h2>
           <p>A focused shop: custom software, integrations, productized tools, and hands-on delivery.</p>
         </div>
-        <div class="cards cards-2 cards-4" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+        <div class="cards cards-4">
           <article class="card reveal">
             <div class="card-icon" aria-hidden="true">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h14"/></svg>
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h14"/></svg>
             </div>
             <h3>Custom software</h3>
             <p>Web apps and internal tools shaped around your process—not the other way around.</p>
+            <a class="card-link" href="services.html">Learn more →</a>
           </article>
           <article class="card reveal">
             <div class="card-icon" aria-hidden="true">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 9l3 3-3 3M13 15h3M5 5h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z"/></svg>
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 9l3 3-3 3M13 15h3M5 5h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z"/></svg>
             </div>
             <h3>Integrations &amp; APIs</h3>
             <p>Connect billing, CRM, access control, and the tools you already rely on.</p>
+            <a class="card-link" href="services.html">Learn more →</a>
           </article>
           <article class="card reveal">
             <div class="card-icon" aria-hidden="true">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
             </div>
             <h3>Productized tools</h3>
             <p>Ready-to-run products like GymQR—deployable faster, still adaptable to your brand.</p>
+            <a class="card-link" href="solutions.html">See GymQR →</a>
           </article>
           <article class="card reveal">
             <div class="card-icon" aria-hidden="true">
-              <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
             </div>
-            <h3>Implementation &amp; support</h3>
+            <h3>Implementation</h3>
             <p>Onboarding, training, and ongoing support so the software sticks with your team.</p>
+            <a class="card-link" href="services.html">Learn more →</a>
           </article>
         </div>
-        <p style="margin-top: 1.75rem;" class="reveal">
-          <a class="card-link" href="services.html">Full services overview →</a>
-        </p>
       </div>
     </section>
 
-    <section class="section section-alt" id="gymqr">
+    <section class="section" id="gymqr">
       <div class="container product-band">
         <div class="reveal">
           <p class="eyebrow">Flagship product</p>
@@ -167,7 +151,7 @@
         <div class="product-visual reveal" aria-hidden="true">
           <div class="pv-row">
             <span class="pv-badge">GymQR</span>
-            <span style="color: var(--text-dim); font-size: 0.8rem;">Machine guide · demo UI</span>
+            <span style="color: var(--text-dim); font-size: 0.85rem;">Machine guide · demo UI</span>
           </div>
           <div class="pv-screen">
             <div class="pv-bar accent"></div>
@@ -179,6 +163,29 @@
               <div class="pv-tile"><strong>Log set</strong> Weight · reps</div>
               <div class="pv-tile"><strong>Staff edit</strong> Content live</div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="who">
+      <div class="container">
+        <div class="section-header reveal">
+          <h2>Who we serve</h2>
+          <p>Businesses that need software shaped around how they work day to day.</p>
+        </div>
+        <div class="audience-list">
+          <div class="audience-item reveal">
+            <h3>Gyms &amp; fitness operators</h3>
+            <p>Tools for member guidance, tracking, and staff workflows—starting with GymQR.</p>
+          </div>
+          <div class="audience-item reveal">
+            <h3>Service businesses</h3>
+            <p>Custom apps, booking flows, and internal tools when off-the-shelf software doesn’t quite fit.</p>
+          </div>
+          <div class="audience-item reveal">
+            <h3>Teams with systems to connect</h3>
+            <p>APIs, integrations, and light data plumbing so your stack talks without duct tape.</p>
           </div>
         </div>
       </div>
@@ -211,11 +218,13 @@
       </div>
     </section>
 
-    <section class="section section-alt">
-      <div class="container cta-band reveal">
-        <h2>Ready to get started?</h2>
-        <p>Whether you’re a gym owner curious about GymQR or a team with a custom software need—send a note. We’ll reply with clear next steps.</p>
-        <a class="btn btn-primary" href="contact.html">Contact Astra Solutions</a>
+    <section class="section section-wash">
+      <div class="container reveal">
+        <div class="cta-panel">
+          <h2>Ready to get started?</h2>
+          <p>Whether you’re a gym owner curious about GymQR or a team with a custom software need—send a note. We’ll reply with clear next steps.</p>
+          <a class="btn btn-primary" href="contact.html">Contact Astra Solutions</a>
+        </div>
       </div>
     </section>
   </main>
@@ -226,8 +235,8 @@
         <div class="footer-brand">
           <a class="logo" href="index.html">
             <svg class="logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-              <rect width="32" height="32" rx="6" fill="#1B3A4B"/>
-              <path d="M16 7L25 23H7L16 7Z" fill="#F7F6F3"/>
+              <path d="M16 3L29 28H3L16 3Z" fill="#0176D3"/>
+              <path d="M16 12L22.5 25H9.5L16 12Z" fill="#FFFFFF"/>
             </svg>
             Astra Solutions
           </a>
