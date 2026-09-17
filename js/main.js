@@ -20,8 +20,7 @@
     });
   }
 
-  // Active page highlighting (already set via aria-current / class in HTML,
-  // but ensure current path matches if needed)
+  // Active page highlighting
   var path = window.location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".nav-desktop a, .nav-mobile a").forEach(function (a) {
     var href = a.getAttribute("href");
@@ -32,30 +31,6 @@
       a.setAttribute("aria-current", "page");
     }
   });
-
-  // Reveal on scroll
-  var reveals = document.querySelectorAll(".reveal");
-  if (reveals.length && "IntersectionObserver" in window) {
-    var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) {
-      reveals.forEach(function (el) { el.classList.add("visible"); });
-    } else {
-      var io = new IntersectionObserver(
-        function (entries) {
-          entries.forEach(function (entry) {
-            if (entry.isIntersecting) {
-              entry.target.classList.add("visible");
-              io.unobserve(entry.target);
-            }
-          });
-        },
-        { threshold: 0.12, rootMargin: "0px 0px -40px 0px" }
-      );
-      reveals.forEach(function (el) { io.observe(el); });
-    }
-  } else {
-    reveals.forEach(function (el) { el.classList.add("visible"); });
-  }
 
   // Contact form validation (client-side only)
   var form = document.getElementById("contact-form");
@@ -122,7 +97,6 @@
       form.reset();
     });
 
-    // Clear error on input
     form.querySelectorAll("input, select, textarea").forEach(function (el) {
       el.addEventListener("input", function () {
         el.classList.remove("error");
