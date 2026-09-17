@@ -1,6 +1,6 @@
-# Astra Solutions — marketing site
+# Cindara — marketing site
 
-Static multi-page marketing website for **Astra Solutions**, a B2B software practice based in Montréal. The site presents company services and the flagship product **GymQR Guide** (QR machine instructions + workout tracking for gym operators).
+Static multi-page marketing website for **Cindara**, a B2B software practice based in Montréal. Domain: [cindara.dev](https://cindara.dev). The site presents company services and the flagship product **GymQR Guide** (QR machine instructions + workout tracking for gym operators).
 
 **Stack:** HTML, CSS, and JavaScript only. No React, no build step, no npm.
 
@@ -39,5 +39,5 @@ Any static host works (GitHub Pages, Netlify, S3, etc.). Point the host at the r
 ## Notes
 
 - Contact form does **not** post to a backend; it validates in-browser and shows a success message. Wire it to Formspree, Netlify Forms, or your API when ready.
-- Email `hello@astrasolutions.ca` is a placeholder.
-- “Astra Solutions” is a working company name.
+- Email `hello@cindara.dev` is a placeholder.
+- “Cindara” is a working company name.
