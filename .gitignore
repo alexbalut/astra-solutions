@@ -6,3 +6,6 @@ desktop.ini
 .vscode/
 *.swp
 *~
+
+# local screenshots
+shots/
