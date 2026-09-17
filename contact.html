@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Contact Cindara — ask about GymQR for your gym or custom B2B software projects.">
+  <meta name="description" content="Contact Cindara — ask about custom B2B software, integrations, or productized tools.">
   <title>Contact — Cindara</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
     <div class="container header-inner">
       <a class="logo" href="index.html" aria-label="Cindara home">
         <svg class="logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-          <path d="M16 3L29 28H3L16 3Z" fill="#0176D3"/>
+          <path d="M16 3L29 28H3L16 3Z" fill="#3B9EFF"/>
           <path d="M16 12L22.5 25H9.5L16 12Z" fill="#FFFFFF"/>
         </svg>
         Cindara
@@ -26,7 +26,6 @@
       <nav class="nav-desktop" aria-label="Primary">
         <a href="index.html">Home</a>
         <a href="services.html">Services</a>
-        <a href="solutions.html">Solutions</a>
         <a href="about.html">About</a>
         <a href="contact.html" class="nav-cta active" aria-current="page">Contact</a>
       </nav>
@@ -37,7 +36,6 @@
     <nav id="mobile-nav" class="nav-mobile" aria-label="Mobile">
       <a href="index.html">Home</a>
       <a href="services.html">Services</a>
-      <a href="solutions.html">Solutions</a>
       <a href="about.html">About</a>
       <a href="contact.html" class="nav-cta active" aria-current="page">Contact</a>
     </nav>
@@ -48,14 +46,14 @@
       <div class="container">
         <p class="eyebrow">Contact</p>
         <h1>Tell us what you’re working on</h1>
-        <p class="lead">GymQR for your facility, a custom build, or an integration question—send a short note. We’ll reply with next steps.</p>
+        <p class="lead">A custom build, an integration question, or a productized tool—send a short note. We’ll reply with next steps.</p>
       </div>
     </div>
 
     <div class="container contact-grid">
       <aside class="contact-info reveal">
         <h2>What happens next</h2>
-        <p>This form is client-side for this demo site—it validates your input and shows a success message. For a real conversation, email us directly or use the success state as a checklist of what we’ll ask.</p>
+        <p>This form is client-side for this demo site—it validates your input and shows a success message. For a real conversation, email us directly.</p>
         <ol class="next-steps">
           <li>
             <span class="next-num" aria-hidden="true">1</span>
@@ -68,21 +66,20 @@
             <span class="next-num" aria-hidden="true">2</span>
             <div>
               <strong>Short reply or call</strong>
-              <span>Clarify fit, timeline, and whether GymQR or custom work makes sense.</span>
+              <span>Clarify fit, timeline, and whether custom or productized work makes sense.</span>
             </div>
           </li>
           <li>
             <span class="next-num" aria-hidden="true">3</span>
             <div>
               <strong>Concrete next step</strong>
-              <span>A demo, a scoped proposal, or an honest “not the right fit.”</span>
+              <span>A scoped proposal, a discovery call, or an honest “not the right fit.”</span>
             </div>
           </li>
         </ol>
         <div class="contact-email">
           <p>Prefer email?</p>
           <a href="mailto:hello@cindara.dev">hello@cindara.dev</a>
-          <p style="margin-top: 0.75rem; font-size: 0.8rem;">Placeholder address for this marketing site—replace when your domain mail is live.</p>
         </div>
       </aside>
 
@@ -106,7 +103,7 @@
             </div>
           </div>
           <div class="form-group">
-            <label for="company">Company or gym <span class="hint">(required)</span></label>
+            <label for="company">Company <span class="hint">(required)</span></label>
             <input type="text" id="company" name="company" autocomplete="organization" required aria-describedby="company-error">
             <p id="company-error" class="field-error" role="alert"></p>
           </div>
@@ -114,9 +111,9 @@
             <label for="interest">I’m interested in</label>
             <select id="interest" name="interest" required aria-describedby="interest-error">
               <option value="">Select a topic…</option>
-              <option value="gymqr">GymQR for my gym</option>
               <option value="custom">Custom software</option>
               <option value="integrations">Integrations / APIs</option>
+              <option value="productized">Productized tools</option>
               <option value="support">Implementation &amp; support</option>
               <option value="other">Something else</option>
             </select>
@@ -124,7 +121,7 @@
           </div>
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" required aria-describedby="message-error" placeholder="Facility size, what you’re trying to improve, timeline…"></textarea>
+            <textarea id="message" name="message" required aria-describedby="message-error" placeholder="What you’re trying to improve, systems involved, timeline…"></textarea>
             <p id="message-error" class="field-error" role="alert"></p>
           </div>
           <button type="submit" class="btn btn-primary" style="width: 100%;">Send message</button>
@@ -142,7 +139,7 @@
         <div class="footer-brand">
           <a class="logo" href="index.html">
             <svg class="logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-              <path d="M16 3L29 28H3L16 3Z" fill="#0176D3"/>
+              <path d="M16 3L29 28H3L16 3Z" fill="#3B9EFF"/>
               <path d="M16 12L22.5 25H9.5L16 12Z" fill="#FFFFFF"/>
             </svg>
             Cindara
@@ -154,7 +151,6 @@
           <h4>Navigate</h4>
           <ul>
             <li><a href="services.html">Services</a></li>
-            <li><a href="solutions.html">Solutions</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>

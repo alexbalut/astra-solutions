@@ -1,8 +1,10 @@
 # Cindara — marketing site
 
-Static multi-page marketing website for **Cindara**, a B2B software practice based in Montréal. Domain: [cindara.dev](https://cindara.dev). The site presents company services and the flagship product **GymQR Guide** (QR machine instructions + workout tracking for gym operators).
+Static multi-page marketing website for **Cindara**, a B2B software practice based in Montréal. Domain: [cindara.dev](https://cindara.dev). Practical software for operators — custom tools, integrations, productized tools, and implementation.
 
 **Stack:** HTML, CSS, and JavaScript only. No React, no build step, no npm.
+
+**Look:** Dark cinematic UI (near-black, white type, ice-blue accent) with full-viewport hero motion and scroll reveals.
 
 ## Preview locally
 
@@ -23,14 +25,13 @@ Then visit `http://localhost:8080`.
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Home — hero, who we serve, services snapshot, GymQR, process, CTA |
-| `services.html` | Custom software, integrations, productized tools, support |
-| `solutions.html` | GymQR Guide (flagship) + how we work with operators |
-| `about.html` | Company story, Montréal roots, values, working-name note |
+| `index.html` | Home — cinematic hero, what we do, tech image band, process, CTA |
+| `services.html` | Custom software, integrations, productized tools, implementation |
+| `about.html` | Montréal B2B shop, values |
 | `contact.html` | Client-side contact form (validate + success UI) |
-| `privacy.html` | Short privacy note for the demo marketing site |
+| `privacy.html` | Short privacy note (footer only) |
 
-Shared assets: `css/styles.css`, `js/main.js`, `favicon.svg`.
+Shared assets: `css/styles.css`, `js/main.js`, `favicon.svg`, `images/`.
 
 ## Deploy
 
@@ -39,5 +40,5 @@ Any static host works (GitHub Pages, Netlify, S3, etc.). Point the host at the r
 ## Notes
 
 - Contact form does **not** post to a backend; it validates in-browser and shows a success message. Wire it to Formspree, Netlify Forms, or your API when ready.
-- Email `hello@cindara.dev` is a placeholder.
-- “Cindara” is a working company name.
+- Email `hello@cindara.dev` is the public contact address.
+- Photo credits: see `CREDITS.md`.

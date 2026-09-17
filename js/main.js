@@ -1,6 +1,8 @@
 (function () {
   "use strict";
 
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
   // Mobile nav
   var toggle = document.querySelector(".menu-toggle");
   var mobileNav = document.querySelector(".nav-mobile");
@@ -8,16 +10,28 @@
     toggle.addEventListener("click", function () {
       var open = toggle.getAttribute("aria-expanded") === "true";
       toggle.setAttribute("aria-expanded", String(!open));
+      toggle.setAttribute("aria-label", open ? "Open menu" : "Close menu");
       mobileNav.classList.toggle("open", !open);
       document.body.style.overflow = open ? "" : "hidden";
     });
     mobileNav.querySelectorAll("a").forEach(function (link) {
       link.addEventListener("click", function () {
         toggle.setAttribute("aria-expanded", "false");
+        toggle.setAttribute("aria-label", "Open menu");
         mobileNav.classList.remove("open");
         document.body.style.overflow = "";
       });
     });
+  }
+
+  // Sticky header state
+  var header = document.querySelector(".site-header");
+  if (header) {
+    var onScroll = function () {
+      header.classList.toggle("is-scrolled", window.scrollY > 24);
+    };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
   }
 
   // Active page highlighting
@@ -31,6 +45,109 @@
       a.setAttribute("aria-current", "page");
     }
   });
+
+  // Scroll reveals
+  var reveals = document.querySelectorAll(".reveal");
+  if (reduceMotion) {
+    reveals.forEach(function (el) { el.classList.add("is-visible"); });
+  } else if ("IntersectionObserver" in window && reveals.length) {
+    var revealObs = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            revealObs.unobserve(entry.target);
+          }
+        });
+      },
+      { rootMargin: "0px 0px -8% 0px", threshold: 0.12 }
+    );
+    reveals.forEach(function (el) { revealObs.observe(el); });
+  } else {
+    reveals.forEach(function (el) { el.classList.add("is-visible"); });
+  }
+
+  // Bleed panel ken-burns trigger
+  var bleeds = document.querySelectorAll(".bleed-panel");
+  if (!reduceMotion && "IntersectionObserver" in window && bleeds.length) {
+    var bleedObs = new IntersectionObserver(
+      function (entries) {
+        entries.forEach(function (entry) {
+          entry.target.classList.toggle("is-inview", entry.isIntersecting);
+        });
+      },
+      { threshold: 0.2 }
+    );
+    bleeds.forEach(function (el) { bleedObs.observe(el); });
+  } else {
+    bleeds.forEach(function (el) { el.classList.add("is-inview"); });
+  }
+
+  // Hero slideshow
+  var hero = document.querySelector(".hero-cinematic");
+  if (hero) {
+    var slides = Array.prototype.slice.call(hero.querySelectorAll(".hero-slide"));
+    var dots = Array.prototype.slice.call(hero.querySelectorAll(".hero-progress button"));
+    var pauseBtn = hero.querySelector(".hero-pause");
+    var index = 0;
+    var paused = false;
+    var timer = null;
+    var DURATION = 7000;
+
+    function show(i) {
+      index = (i + slides.length) % slides.length;
+      slides.forEach(function (s, n) {
+        s.classList.toggle("is-active", n === index);
+      });
+      dots.forEach(function (d, n) {
+        d.classList.toggle("is-active", n === index);
+        d.setAttribute("aria-current", n === index ? "true" : "false");
+      });
+    }
+
+    function next() {
+      show(index + 1);
+      schedule();
+    }
+
+    function schedule() {
+      clearTimeout(timer);
+      if (reduceMotion || paused || slides.length < 2) return;
+      timer = setTimeout(next, DURATION);
+    }
+
+    show(0);
+    schedule();
+
+    dots.forEach(function (dot, n) {
+      dot.addEventListener("click", function () {
+        show(n);
+        schedule();
+      });
+    });
+
+    if (pauseBtn) {
+      pauseBtn.addEventListener("click", function () {
+        paused = !paused;
+        hero.classList.toggle("is-paused", paused);
+        pauseBtn.setAttribute("aria-pressed", String(paused));
+        pauseBtn.setAttribute("aria-label", paused ? "Play slideshow" : "Pause slideshow");
+        var playIcon = pauseBtn.querySelector(".icon-play");
+        var pauseIcon = pauseBtn.querySelector(".icon-pause");
+        if (playIcon && pauseIcon) {
+          playIcon.hidden = !paused;
+          pauseIcon.hidden = paused;
+        }
+        if (paused) clearTimeout(timer);
+        else schedule();
+      });
+    }
+
+    document.addEventListener("visibilitychange", function () {
+      if (document.hidden) clearTimeout(timer);
+      else if (!paused) schedule();
+    });
+  }
 
   // Contact form validation (client-side only)
   var form = document.getElementById("contact-form");
@@ -61,21 +178,16 @@
         }
       }
 
-      var name = (document.getElementById("name") || {}).value || "";
-      var email = (document.getElementById("email") || {}).value || "";
-      var company = (document.getElementById("company") || {}).value || "";
+      var name = ((document.getElementById("name") || {}).value || "").trim();
+      var email = ((document.getElementById("email") || {}).value || "").trim();
+      var company = ((document.getElementById("company") || {}).value || "").trim();
       var interest = (document.getElementById("interest") || {}).value || "";
-      var message = (document.getElementById("message") || {}).value || "";
-
-      name = name.trim();
-      email = email.trim();
-      company = company.trim();
-      message = message.trim();
+      var message = ((document.getElementById("message") || {}).value || "").trim();
 
       setError("name", name.length < 2 ? "Please enter your name." : "");
       var emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
       setError("email", !emailOk ? "Please enter a valid email address." : "");
-      setError("company", company.length < 1 ? "Please enter your company or gym name." : "");
+      setError("company", company.length < 1 ? "Please enter your company name." : "");
       setError("interest", !interest ? "Please select a topic." : "");
       setError("message", message.length < 10 ? "Please add a short message (at least 10 characters)." : "");
 
@@ -85,7 +197,6 @@
         return;
       }
 
-      // Demo success — no backend
       var card = form.closest(".form-card");
       if (card) card.classList.add("submitted");
       var success = document.getElementById("form-success");

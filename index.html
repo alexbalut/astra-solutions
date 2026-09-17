@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Cindara builds practical B2B software for operators — custom tools, integrations, and products like GymQR for Montreal gyms and beyond.">
+  <meta name="description" content="Cindara builds practical B2B software for operators — custom tools, integrations, productized tools, and implementation. Montréal / Québec.">
   <title>Cindara — Practical B2B software</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -18,7 +18,7 @@
     <div class="container header-inner">
       <a class="logo" href="index.html" aria-label="Cindara home">
         <svg class="logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-          <path d="M16 3L29 28H3L16 3Z" fill="#0176D3"/>
+          <path d="M16 3L29 28H3L16 3Z" fill="#3B9EFF"/>
           <path d="M16 12L22.5 25H9.5L16 12Z" fill="#FFFFFF"/>
         </svg>
         Cindara
@@ -26,7 +26,6 @@
       <nav class="nav-desktop" aria-label="Primary">
         <a href="index.html" class="active" aria-current="page">Home</a>
         <a href="services.html">Services</a>
-        <a href="solutions.html">Solutions</a>
         <a href="about.html">About</a>
         <a href="contact.html" class="nav-cta">Contact</a>
       </nav>
@@ -37,165 +36,110 @@
     <nav id="mobile-nav" class="nav-mobile" aria-label="Mobile">
       <a href="index.html" class="active" aria-current="page">Home</a>
       <a href="services.html">Services</a>
-      <a href="solutions.html">Solutions</a>
       <a href="about.html">About</a>
       <a href="contact.html" class="nav-cta">Contact</a>
     </nav>
   </header>
 
   <main id="main">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div>
-          <p class="eyebrow">B2B software · Montréal</p>
-          <h1>Software that fits how you actually operate</h1>
-          <p class="hero-lead">
-            Cindara designs and builds practical tools for gyms, service businesses, and teams who need software that fits how they work.
-          </p>
-          <div class="btn-group">
-            <a class="btn btn-primary" href="contact.html">Start a conversation</a>
-            <a class="btn btn-secondary" href="solutions.html">See GymQR</a>
-          </div>
-          <p class="hero-fr">Basé à Montréal — outils conçus pour les opérateurs du Québec et d’ailleurs.</p>
+    <section class="hero-cinematic" aria-label="Introduction">
+      <div class="hero-slides" aria-hidden="true">
+        <div class="hero-slide is-active">
+          <div class="hero-slide__media" style="background-image: url('images/hero-tech.jpg')"></div>
         </div>
-        <aside class="hero-visual hero-visual--photo reveal" aria-label="Featured product">
-          <div class="photo-frame tall">
-            <img src="images/hero-laptop.jpg" alt="Laptop and monitor on a bright desk showing code and a web app in progress" width="800" height="600" loading="eager">
-          </div>
-          <p class="photo-caption">Custom software · GymQR</p>
-          <a class="card-link" href="solutions.html">Explore GymQR →</a>
-        </aside>
+        <div class="hero-slide">
+          <div class="hero-slide__media" style="background-image: url('images/circuit-dark.jpg')"></div>
+        </div>
+        <div class="hero-slide">
+          <div class="hero-slide__media" style="background-image: url('images/code-desk.jpg')"></div>
+        </div>
+      </div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <p class="eyebrow">B2B software · Montréal</p>
+        <h1>Software that fits how you operate</h1>
+        <p class="hero-lead">
+          Cindara designs and builds practical tools for operators—custom systems, integrations, and productized software that match the work on the ground.
+        </p>
+        <div class="btn-group">
+          <a class="btn btn-primary" href="contact.html">Start a conversation</a>
+          <a class="btn btn-secondary" href="services.html">View services</a>
+        </div>
+        <p class="hero-fr">Basé à Montréal — outils conçus pour les opérateurs du Québec et d’ailleurs.</p>
+      </div>
+      <div class="hero-controls">
+        <div class="hero-progress" role="tablist" aria-label="Hero slides">
+          <button type="button" class="is-active" aria-label="Slide 1" aria-current="true"></button>
+          <button type="button" aria-label="Slide 2"></button>
+          <button type="button" aria-label="Slide 3"></button>
+        </div>
+        <button type="button" class="hero-pause" aria-label="Pause slideshow" aria-pressed="false">
+          <svg class="icon-pause" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true"><rect x="2" y="1" width="2.5" height="10"/><rect x="7.5" y="1" width="2.5" height="10"/></svg>
+          <svg class="icon-play" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true" hidden><path d="M3 1.5v9l8-4.5-8-4.5z"/></svg>
+        </button>
       </div>
     </section>
 
-    <section class="section section-alt" id="services">
+    <section class="section" id="what-we-do">
       <div class="container">
         <div class="section-header reveal">
-          <h2>What we do</h2>
-          <p>A focused shop: custom software, integrations, productized tools, and hands-on delivery.</p>
+          <p class="eyebrow">What we do</p>
+          <h2>Four lanes. One standard.</h2>
+          <p>Custom software, integrations, productized tools, and hands-on delivery—scoped to what you need, not a package deal.</p>
         </div>
-        <div class="cards cards-4">
-          <article class="card reveal">
-            <div class="card-icon" aria-hidden="true">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h14"/></svg>
-            </div>
+        <div class="offer-grid">
+          <article class="offer-item reveal">
+            <span class="offer-num">01</span>
             <h3>Custom software</h3>
-            <p>Web apps and internal tools shaped around your process—not the other way around.</p>
-            <a class="card-link" href="services.html">Learn more →</a>
-          </article>
-          <article class="card reveal">
-            <div class="card-icon" aria-hidden="true">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 9l3 3-3 3M13 15h3M5 5h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z"/></svg>
+            <div>
+              <p>Web apps and internal tools shaped around your process—not the other way around.</p>
+              <a href="services.html">Learn more</a>
             </div>
+          </article>
+          <article class="offer-item reveal">
+            <span class="offer-num">02</span>
             <h3>Integrations &amp; APIs</h3>
-            <p>Connect billing, CRM, access control, and the tools you already rely on.</p>
-            <a class="card-link" href="services.html">Learn more →</a>
-          </article>
-          <article class="card reveal">
-            <div class="card-icon" aria-hidden="true">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+            <div>
+              <p>Connect billing, CRM, access control, and the systems you already rely on.</p>
+              <a href="services.html">Learn more</a>
             </div>
+          </article>
+          <article class="offer-item reveal">
+            <span class="offer-num">03</span>
             <h3>Productized tools</h3>
-            <p>Ready-to-run products like GymQR—deployable faster, still adaptable to your brand.</p>
-            <a class="card-link" href="solutions.html">See GymQR →</a>
-          </article>
-          <article class="card reveal">
-            <div class="card-icon" aria-hidden="true">
-              <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            <div>
+              <p>Repeatable problems get ready-to-run products—configured to your brand, faster to launch.</p>
+              <a href="services.html">Learn more</a>
             </div>
+          </article>
+          <article class="offer-item reveal">
+            <span class="offer-num">04</span>
             <h3>Implementation</h3>
-            <p>Onboarding, training, and ongoing support so the software sticks with your team.</p>
-            <a class="card-link" href="services.html">Learn more →</a>
+            <div>
+              <p>Onboarding, training, and ongoing support so the software sticks with your team.</p>
+              <a href="services.html">Learn more</a>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section" aria-label="Studio and gym floors">
-      <div class="container">
-        <div class="photo-grid cols-2 reveal">
-          <figure>
-            <div class="photo-frame">
-              <img src="images/gym-floor.jpg" alt="Bright commercial gym with cable machines, dumbbell racks, and weight benches" width="800" height="533" loading="lazy">
-            </div>
-            <figcaption class="photo-caption">Gym floors we design for</figcaption>
-          </figure>
-          <figure>
-            <div class="photo-frame">
-              <img src="images/office-collab.jpg" alt="Team working together on laptops around a wooden table" width="800" height="533" loading="lazy">
-            </div>
-            <figcaption class="photo-caption">Operators and builders</figcaption>
-          </figure>
-        </div>
+    <section class="bleed-panel" aria-label="Technology">
+      <div class="bleed-panel__media" style="background-image: url('images/laptop-code.jpg')"></div>
+      <div class="bleed-panel__shade"></div>
+      <div class="bleed-panel__content reveal">
+        <p class="eyebrow">Built for operators</p>
+        <h2>Clear scope. Usable delivery.</h2>
+        <p>We listen to how your team works, then ship software that fits—documented, maintainable, and ready for the people who use it every day.</p>
       </div>
     </section>
 
-    <section class="section section-alt" id="gymqr">
-      <div class="container product-band">
-        <div class="reveal">
-          <p class="eyebrow">Flagship product</p>
-          <h2>GymQR Guide</h2>
-          <p class="lead">
-            Machine-side QR instructions and simple workout tracking—so members know what to do, and operators control the content.
-          </p>
-          <ul class="feature-list">
-            <li>
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
-              QR codes on equipment → clear, mobile-friendly guides
-            </li>
-            <li>
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
-              Workout logging without forcing another heavyweight app
-            </li>
-            <li>
-              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg>
-              Built with Montreal gym floors in mind; adaptable elsewhere
-            </li>
-          </ul>
-          <div class="btn-group">
-            <a class="btn btn-primary" href="solutions.html">How GymQR works</a>
-            <a class="btn btn-secondary" href="contact.html">Ask about a demo</a>
-          </div>
-        </div>
-        <div class="product-visual product-visual--photo reveal">
-          <div class="pv-row">
-            <span class="pv-badge">GymQR</span>
-          </div>
-          <div class="photo-frame">
-            <img src="images/gym-floor.jpg" alt="Well-lit gym floor with strength machines and free weights" width="800" height="533" loading="lazy">
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="who">
+    <section class="section" id="process">
       <div class="container">
         <div class="section-header reveal">
-          <h2>Who we serve</h2>
-          <p>Businesses that need software shaped around how they work day to day.</p>
-        </div>
-        <div class="audience-list">
-          <div class="audience-item reveal">
-            <h3>Gyms &amp; fitness operators</h3>
-            <p>Tools for member guidance, tracking, and staff workflows—starting with GymQR.</p>
-          </div>
-          <div class="audience-item reveal">
-            <h3>Service businesses</h3>
-            <p>Custom apps, booking flows, and internal tools when off-the-shelf software doesn’t quite fit.</p>
-          </div>
-          <div class="audience-item reveal">
-            <h3>Teams with systems to connect</h3>
-            <p>APIs, integrations, and light data plumbing so your stack talks without duct tape.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-alt" id="process">
-      <div class="container">
-        <div class="section-header reveal">
-          <h2>How we work</h2>
-          <p>Short cycles, clear ownership, no mystery roadmaps.</p>
+          <p class="eyebrow">How we work</p>
+          <h2>Short cycles. Clear ownership.</h2>
+          <p>No mystery roadmaps—just concrete plans and usable increments.</p>
         </div>
         <ol class="steps">
           <li class="step reveal">
@@ -218,12 +162,13 @@
       </div>
     </section>
 
-    <section class="section section-wash">
+    <section class="cta-band">
       <div class="container reveal">
-        <div class="cta-panel">
-          <h2>Ready to get started?</h2>
-          <p>Whether you’re a gym owner curious about GymQR or a team with a custom software need—send a note. We’ll reply with clear next steps.</p>
+        <h2>Ready to get started?</h2>
+        <p>Tell us what you’re building or connecting. We’ll reply with clear next steps—or an honest “not the right fit.”</p>
+        <div class="btn-group">
           <a class="btn btn-primary" href="contact.html">Contact Cindara</a>
+          <a class="btn btn-secondary" href="mailto:hello@cindara.dev">hello@cindara.dev</a>
         </div>
       </div>
     </section>
@@ -235,7 +180,7 @@
         <div class="footer-brand">
           <a class="logo" href="index.html">
             <svg class="logo-mark" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-              <path d="M16 3L29 28H3L16 3Z" fill="#0176D3"/>
+              <path d="M16 3L29 28H3L16 3Z" fill="#3B9EFF"/>
               <path d="M16 12L22.5 25H9.5L16 12Z" fill="#FFFFFF"/>
             </svg>
             Cindara
@@ -247,7 +192,6 @@
           <h4>Navigate</h4>
           <ul>
             <li><a href="services.html">Services</a></li>
-            <li><a href="solutions.html">Solutions</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="contact.html">Contact</a></li>
           </ul>
